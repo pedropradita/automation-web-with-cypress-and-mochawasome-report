@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-21T04:27:29.206Z",
+    "end": "2020-01-21T04:27:35.225Z",
+    "duration": 6019,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ec4a6833-5056-4979-8d8d-502635fe913e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b0c30a43-0289-46e4-8567-4bb168e12c9f",
+          "title": "People",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Using feature search with valid user",
+              "fullTitle": "People Using feature search with valid user",
+              "timedOut": null,
+              "duration": 5296,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('People').click();\ncy.get('input').type('pedropradita');\ncy.get('tbody > tr > :nth-child(1)').should('have.length', 1);",
+              "err": {},
+              "uuid": "2e80096c-7911-4529-af24-6b82d2fb33fd",
+              "parentUUID": "b0c30a43-0289-46e4-8567-4bb168e12c9f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Using feature search with invalid user",
+              "fullTitle": "People Using feature search with invalid user",
+              "timedOut": null,
+              "duration": 653,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input').clear().type('abcd');\ncy.get('tbody > tr > :nth-child(1)').should('have.length', 1);",
+              "err": {},
+              "uuid": "5886a634-1d7c-46cd-8fd0-56e5634dd38b",
+              "parentUUID": "b0c30a43-0289-46e4-8567-4bb168e12c9f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e80096c-7911-4529-af24-6b82d2fb33fd",
+            "5886a634-1d7c-46cd-8fd0-56e5634dd38b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5949,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

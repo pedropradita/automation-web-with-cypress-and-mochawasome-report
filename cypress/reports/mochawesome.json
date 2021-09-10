@@ -1,0 +1,697 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 20,
+    "passes": 17,
+    "pending": 0,
+    "failures": 3,
+    "start": "2019-12-23T03:25:17.245Z",
+    "end": "2019-12-23T03:25:17.245Z",
+    "duration": 69705,
+    "testsRegistered": 20,
+    "passPercent": 85,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7241d966-74e2-4e30-874b-d40b8dde1488",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bebce93c-a697-4e23-9a53-403a21d4c226",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Can find and type in username",
+              "fullTitle": "Login Can find and type in username",
+              "timedOut": null,
+              "duration": 4280,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"login\"]').type(\"hradmin\").should(\"have.value\", \"hradmin\");",
+              "err": {},
+              "uuid": "4bc9e8ef-a3f3-4a60-a2ea-b6b9f92d9ba6",
+              "parentUUID": "bebce93c-a697-4e23-9a53-403a21d4c226",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can find and type in password",
+              "fullTitle": "Login Can find and type in password",
+              "timedOut": null,
+              "duration": 2399,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://cms.tenggo.id\");\ncy.get('input[id=\"password\"]').type(\"betul\").should(\"have.value\", \"betul\");",
+              "err": {},
+              "uuid": "deb78384-a8b3-4d9f-8af0-f2531380a9ea",
+              "parentUUID": "bebce93c-a697-4e23-9a53-403a21d4c226",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will succeed when type valid user credentials",
+              "fullTitle": "Login Will succeed when type valid user credentials",
+              "timedOut": null,
+              "duration": 2330,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.server()\n//   .route({\n//   method: 'POST',\n//   url: '/api/v1/auth/login',\n//   response: '',\n//   status: 200\n// })\n// .as(\"login\")\n// cy.server()\n// cy.route({\n//   method: 'GET',\n//   url: '/api/v1/reservations/user/monthly?employee_id=3&page=1&query=0&year=&status=all',\n//   response: '',\n//   status: 200\n// })\ncy.get('input[name=\"login\"]').type('hradmin').should(\"have.value\", 'hradmin');\ncy.get('input[id=\"password\"]').type('betul').should(\"have.value\", 'betul');\ncy.contains('Login').click({\n  force: true\n});\ncy.get('img').and('visible'); // .wait('@login')",
+              "err": {},
+              "uuid": "2ad389eb-a82e-4dda-ab41-c8b24956b699",
+              "parentUUID": "bebce93c-a697-4e23-9a53-403a21d4c226",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will failed when type invalid user credentials",
+              "fullTitle": "Login Will failed when type invalid user credentials",
+              "timedOut": null,
+              "duration": 2954,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: '/api/v1/auth/login',\n  response: '',\n  status: 401\n});\ncy.random(10).then(function (result) {\n  cy.get('input[name=\"login\"]').type(result);\n});\ncy.random(10).then(function (result) {\n  cy.get('input[id=\"password\"]').type(result);\n});\ncy.contains('Login').click();\ncy.contains('Username or Password Incorrect.').should('be.visible');",
+              "err": {},
+              "uuid": "cf2728c5-4392-4ec4-b070-9da001ff2c14",
+              "parentUUID": "bebce93c-a697-4e23-9a53-403a21d4c226",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will failed when not type user credentials",
+              "fullTitle": "Login Will failed when not type user credentials",
+              "timedOut": null,
+              "duration": 1391,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: '/api/v1/auth/login',\n  response: '',\n  status: 401\n});\ncy.contains('Login').click();\ncy.contains('Username cannot be empty').should('be.visible');\ncy.contains('Password is required').should('be.visible');\ncy.contains('Username or Password Incorrect.').should('be.visible');",
+              "err": {},
+              "uuid": "54d91fa6-7a23-4ce0-ad81-fda7b4608e00",
+              "parentUUID": "bebce93c-a697-4e23-9a53-403a21d4c226",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4bc9e8ef-a3f3-4a60-a2ea-b6b9f92d9ba6",
+            "deb78384-a8b3-4d9f-8af0-f2531380a9ea",
+            "2ad389eb-a82e-4dda-ab41-c8b24956b699",
+            "cf2728c5-4392-4ec4-b070-9da001ff2c14",
+            "54d91fa6-7a23-4ce0-ad81-fda7b4608e00"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13354,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "79eae7de-392b-4393-a0bd-609c2bb6456e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+          "title": "Addnewreservation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Addnewreservation Open Create New Reservation",
+              "timedOut": null,
+              "duration": 8398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Meeting Room').click();\ncy.contains('Approval Reservation').click();\ncy.contains('+ Create New Reservation').click();",
+              "err": {},
+              "uuid": "788ba7e2-d2fc-4e19-99dc-7456884def8c",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input New Reservation",
+              "fullTitle": "Addnewreservation Input New Reservation",
+              "timedOut": null,
+              "duration": 3619,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-select__slot > input').type('hradmin').should(\"have.value\", 'hradmin').get('.v-select-list > .v-list > [role=\"listitem\"] > .v-list__tile > .v-list__tile__content > .v-list__tile__title').click();\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(2) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.randomnumber(10).then(function (result) {\n  cy.get(':nth-child(3) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.dtmnow().then(function (result) {\n  cy.get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible').get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click();\n});\ncy.get(':nth-child(6) > .el-date-editor > .el-input__inner').click().get('.el-scrollbar__view > :nth-child(1)').click().and('visible');\ncy.get(':nth-child(7) > .el-date-editor > .el-input__inner').click().get('[style=\"width: 118.953px; position: absolute; top: 544px; left: 264px; z-index: 2003;\"] > .el-scrollbar > .el-picker-panel__content > .el-scrollbar__view > :nth-child(2)').click().and('visible');\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(8) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.get('.text-xs-center > .white--text > .v-btn__content').click();",
+              "err": {},
+              "uuid": "89a26aed-ab46-4c43-9517-9686d2edf15c",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select Room",
+              "fullTitle": "Addnewreservation Select Room",
+              "timedOut": null,
+              "duration": 499,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-card > :nth-child(1) > .v-btn > .v-btn__content').click();",
+              "err": {},
+              "uuid": "8a1fcd6f-d7cc-473b-afbf-579dd9d4a1c2",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "788ba7e2-d2fc-4e19-99dc-7456884def8c",
+            "89a26aed-ab46-4c43-9517-9686d2edf15c",
+            "8a1fcd6f-d7cc-473b-afbf-579dd9d4a1c2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c6c58af5-ad61-4022-b167-595c4ed0c339",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "eea58224-b023-4565-8734-f8e8653a54bd",
+          "title": "Addnewreservation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Addnewreservation Open Create New Reservation",
+              "timedOut": null,
+              "duration": 3113,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Newsfeed').click().get('.right > .v-btn__content').click();",
+              "err": {},
+              "uuid": "4f252e35-e554-464c-8532-721904f37a1e",
+              "parentUUID": "eea58224-b023-4565-8734-f8e8653a54bd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input New Feeds",
+              "fullTitle": "Addnewreservation Input New Feeds",
+              "timedOut": null,
+              "duration": 6463,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(1) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type('Test12!@aaaaaaaaaaaaa').should(\"have.value\", 'Test12!@aaaaaaaaaaaaa');\ncy.get(':nth-child(2) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click().get(':nth-child(3) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click().get(':nth-child(4) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click();\ncy.get('textarea').dblclick().type('bcdefgaaaaa').should(\"have.value\", 'bcdefgaaaaa');\ncy.get(':nth-child(5) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click().get(':nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content').click();\ncy.get(':nth-child(6) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click().get('.menuable__content__active > .v-picker > .v-picker__body > :nth-child(1) > .v-date-picker-table > table > tbody > :nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: ':nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: ':nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content', but never found it.\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at onFailFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85591:16)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137520:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134132:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134142:10)\n    at Async.drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134016:14)",
+                "diff": null
+              },
+              "uuid": "b4542f5f-395d-4a5d-bd90-8f26c2b84073",
+              "parentUUID": "eea58224-b023-4565-8734-f8e8653a54bd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "d575c450-39e3-486f-8b57-ac6d16ec185a",
+              "title": "Upload file",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "successfully uploads a file",
+                  "fullTitle": "Addnewreservation Upload file successfully uploads a file",
+                  "timedOut": null,
+                  "duration": 4509,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.fixture('cy.png', 'base64').then(function (fileContent) {\n  cy.get('.subheading > input').click().upload({\n    fileContent: fileContent,\n    fileName: 'cy.png',\n    mimeType: 'image/png'\n  }, {\n    subjectType: 'input'\n  });\n}); //cy\n//.get('.subheading > input').click()\n//.get('li')\n//.contains('cy.png');\ncy.get('.v-select__selections > input').type('a').should(\"have.value\", 'a').get('.v-list > :nth-child(2) > .v-list__tile > .v-list__tile__content > .v-list__tile__title').click();",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<input type=\"file\" accept=\"image/jpeg, image/png\">\n\nis being covered by another element:\n\n<button type=\"button\" class=\"v-btn v-btn--flat v-btn--floating theme--light\">...</button>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<input type=\"file\" accept=\"image/jpeg, image/png\">\n\nis being covered by another element:\n\n<button type=\"button\" class=\"v-btn v-btn--flat v-btn--floating theme--light\">...</button>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at Object.retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at retryActionability (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85239:19)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Function.Promise.attempt.Promise.try (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:136682:29)\n    at tryFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96984:21)\n    at whenStable (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:97019:12)\n    at https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96569:16\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137524:18)\n    at Promise._fulfill (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137469:18)",
+                    "diff": null
+                  },
+                  "uuid": "aed8906c-2b85-4974-b768-bbb2b09e04af",
+                  "parentUUID": "d575c450-39e3-486f-8b57-ac6d16ec185a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Click submit",
+                  "fullTitle": "Addnewreservation Upload file Click submit",
+                  "timedOut": null,
+                  "duration": 176,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.text-xs-center > .white--text > .v-btn__content').click();",
+                  "err": {},
+                  "uuid": "36a82503-e413-481f-a62e-ecd180b68e5b",
+                  "parentUUID": "d575c450-39e3-486f-8b57-ac6d16ec185a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "36a82503-e413-481f-a62e-ecd180b68e5b"
+              ],
+              "failures": [
+                "aed8906c-2b85-4974-b768-bbb2b09e04af"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4685,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "4f252e35-e554-464c-8532-721904f37a1e"
+          ],
+          "failures": [
+            "b4542f5f-395d-4a5d-bd90-8f26c2b84073"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9576,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c7a5ed7c-68b7-4117-bb23-8706ccdd159d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a9e259cf-519a-4b26-a24d-0fb1f99bee24",
+          "title": "People",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Using feature search with valid user",
+              "fullTitle": "People Using feature search with valid user",
+              "timedOut": null,
+              "duration": 3820,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('People').click();\ncy.get('input').type('pedropradita');\ncy.get('tbody > tr > :nth-child(1)').should('have.length', 1);",
+              "err": {},
+              "uuid": "d4840ff7-80e0-4698-b2f9-514dc0aa8a47",
+              "parentUUID": "a9e259cf-519a-4b26-a24d-0fb1f99bee24",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Using feature search with invalid user",
+              "fullTitle": "People Using feature search with invalid user",
+              "timedOut": null,
+              "duration": 729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input').clear().type('abcd');\ncy.get('tbody > tr > :nth-child(1)').should('have.length', 1);",
+              "err": {},
+              "uuid": "65df3053-d715-4c42-a3d4-ef6461538727",
+              "parentUUID": "a9e259cf-519a-4b26-a24d-0fb1f99bee24",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4840ff7-80e0-4698-b2f9-514dc0aa8a47",
+            "65df3053-d715-4c42-a3d4-ef6461538727"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4549,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bd8dce41-09de-47f4-8ed7-7c75f28391ab",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9f67db38-b57b-4c27-af91-136fa6aeff33",
+          "title": "test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Assert for slide",
+              "fullTitle": "test Assert for slide",
+              "timedOut": null,
+              "duration": 14366,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://www.executeautomation.com/site/');\ncy.get('[aria-label=\"jump to slide 2\"]', {\n  timeout: 60000\n}).should('have.class', 'ls-nav-active');",
+              "err": {},
+              "uuid": "5049df8c-7755-4f1f-8adf-f78b4bc6cde5",
+              "parentUUID": "9f67db38-b57b-4c27-af91-136fa6aeff33",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5049df8c-7755-4f1f-8adf-f78b4bc6cde5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14366,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8f7cc461-5e2c-418b-ad86-7fd6c8c91b61",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+          "title": "Attendaces",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Attendaces Open Create New Reservation",
+              "timedOut": null,
+              "duration": 9868,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Attendances').click().get('.right > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.right > .v-btn__content', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.right > .v-btn__content', but never found it.\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at onFailFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85591:16)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137520:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134132:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134142:10)\n    at Async.drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134016:14)",
+                "diff": null
+              },
+              "uuid": "8ef98922-b9d1-48dc-b17e-cccbd5948ad2",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User select filter show list and choose Attedances Today or Total Attendances",
+              "fullTitle": "Attendaces User select filter show list and choose Attedances Today or Total Attendances",
+              "timedOut": null,
+              "duration": 502,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "c7aaf874-5e96-4238-a840-92f20e062b8d",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can search",
+              "fullTitle": "Attendaces User can search",
+              "timedOut": null,
+              "duration": 211,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a36ea946-c69e-4927-a894-4bc28d441c10",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can edit attendances data",
+              "fullTitle": "Attendaces User can edit attendances data",
+              "timedOut": null,
+              "duration": 30,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6f472eb8-e7c6-4415-9c4e-b867d25f1a09",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can delete attendances data",
+              "fullTitle": "Attendaces User can delete attendances data",
+              "timedOut": null,
+              "duration": 48,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "2ab0dd23-6cd9-43ed-b2f6-e0fad02eab8e",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7aaf874-5e96-4238-a840-92f20e062b8d",
+            "a36ea946-c69e-4927-a894-4bc28d441c10",
+            "6f472eb8-e7c6-4415-9c4e-b867d25f1a09",
+            "2ab0dd23-6cd9-43ed-b2f6-e0fad02eab8e"
+          ],
+          "failures": [
+            "8ef98922-b9d1-48dc-b17e-cccbd5948ad2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

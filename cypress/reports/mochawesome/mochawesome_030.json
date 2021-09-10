@@ -1,0 +1,193 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-01-21T03:05:17.636Z",
+    "end": "2020-01-21T03:05:33.055Z",
+    "duration": 15419,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b3c41c6-7cd6-478a-b51d-db6fd0633157",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bf01c170-fe66-453e-adc4-686d28c3cfd0",
+          "title": "Addnewreservation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Addnewreservation Open Create New Reservation",
+              "timedOut": null,
+              "duration": 4284,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Newsfeed').click().get('.right > .v-btn__content').click();",
+              "err": {},
+              "uuid": "d35c07be-c18e-45cc-bee4-110931470452",
+              "parentUUID": "bf01c170-fe66-453e-adc4-686d28c3cfd0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input New Feeds",
+              "fullTitle": "Addnewreservation Input New Feeds",
+              "timedOut": null,
+              "duration": 6375,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(':nth-child(1) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type('Test12!@aaaaaaaaaaaaa').should(\"have.value\", 'Test12!@aaaaaaaaaaaaa');\ncy.get(':nth-child(2) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click().get(':nth-child(3) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click().get(':nth-child(4) > .v-input__control > .v-input__slot > .v-input--selection-controls__input > .v-input--selection-controls__ripple').click();\ncy.get('textarea').dblclick().type('bcdefgaaaaa').should(\"have.value\", 'bcdefgaaaaa');\ncy.get(':nth-child(5) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click().get(':nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content').click();\ncy.get(':nth-child(6) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click().get('.menuable__content__active > .v-picker > .v-picker__body > :nth-child(1) > .v-date-picker-table > table > tbody > :nth-child(5) > :nth-child(4) > .v-btn > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<div class=\"v-btn__content\">29</div>\n\nhas CSS 'pointer-events: none', inherited from this element:\n\n<button type=\"button\" class=\"v-btn v-btn--flat v-btn--floating v-btn--disabled theme--light\" disabled=\"\">...</button>\n\n'pointer-events: none' prevents user mouse interaction.\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<div class=\"v-btn__content\">29</div>\n\nhas CSS 'pointer-events: none', inherited from this element:\n\n<button type=\"button\" class=\"v-btn v-btn--flat v-btn--floating v-btn--disabled theme--light\" disabled=\"\">...</button>\n\n'pointer-events: none' prevents user mouse interaction.\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at Object.retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at retryActionability (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85239:19)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Function.Promise.attempt.Promise.try (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:136682:29)\n    at tryFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96984:21)\n    at whenStable (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:97019:12)\n    at https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96569:16\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137524:18)\n    at Promise._fulfill (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137469:18)",
+                "diff": null
+              },
+              "uuid": "e355ced6-a38f-4ca5-b4b2-7105cfdc34d0",
+              "parentUUID": "bf01c170-fe66-453e-adc4-686d28c3cfd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [
+            {
+              "uuid": "b7f786f0-7de1-43a1-808f-c50c02a6746a",
+              "title": "Upload file",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "successfully uploads a file",
+                  "fullTitle": "Addnewreservation Upload file successfully uploads a file",
+                  "timedOut": null,
+                  "duration": 4471,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.fixture('cy.png', 'base64').then(function (fileContent) {\n  cy.get('.subheading > input').click().upload({\n    fileContent: fileContent,\n    fileName: 'cy.png',\n    mimeType: 'image/png'\n  }, {\n    subjectType: 'input'\n  });\n}); //cy\n//.get('.subheading > input').click()\n//.get('li')\n//.contains('cy.png');\ncy.get('.v-select__selections > input').type('a').should(\"have.value\", 'a').get('.v-list > :nth-child(2) > .v-list__tile > .v-list__tile__content > .v-list__tile__title').click();",
+                  "err": {
+                    "message": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<input type=\"file\" accept=\"image/jpeg, image/png\">\n\nis being covered by another element:\n\n<td>...</td>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                    "estack": "CypressError: Timed out retrying: cy.click() failed because this element:\n\n<input type=\"file\" accept=\"image/jpeg, image/png\">\n\nis being covered by another element:\n\n<td>...</td>\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at Object.retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at retryActionability (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85239:19)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Function.Promise.attempt.Promise.try (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:136682:29)\n    at tryFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96984:21)\n    at whenStable (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:97019:12)\n    at https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96569:16\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137524:18)\n    at Promise._fulfill (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137469:18)",
+                    "diff": null
+                  },
+                  "uuid": "e4276fb0-6178-4fb4-8726-a55b5299f08f",
+                  "parentUUID": "b7f786f0-7de1-43a1-808f-c50c02a6746a",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Click submit",
+                  "fullTitle": "Addnewreservation Upload file Click submit",
+                  "timedOut": null,
+                  "duration": 178,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.text-xs-center > .white--text > .v-btn__content').click();",
+                  "err": {},
+                  "uuid": "359cfe99-2aa3-4032-b6d2-06a934c31d9a",
+                  "parentUUID": "b7f786f0-7de1-43a1-808f-c50c02a6746a",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "359cfe99-2aa3-4032-b6d2-06a934c31d9a"
+              ],
+              "failures": [
+                "e4276fb0-6178-4fb4-8726-a55b5299f08f"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 4649,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [
+            "d35c07be-c18e-45cc-bee4-110931470452"
+          ],
+          "failures": [
+            "e355ced6-a38f-4ca5-b4b2-7105cfdc34d0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

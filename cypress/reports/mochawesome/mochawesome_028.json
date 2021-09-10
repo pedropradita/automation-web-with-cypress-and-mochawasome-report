@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-01-21T03:04:43.930Z",
+    "end": "2020-01-21T03:05:03.393Z",
+    "duration": 19463,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "97513f34-69cf-4593-a2e6-3c4d89956f64",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d97b5b5f-7787-494a-9f2b-4fa8b0e47786",
+          "title": "Addnewreservation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Addnewreservation Open Create New Reservation",
+              "timedOut": null,
+              "duration": 9608,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Meeting Room').click();\ncy.contains('Approval Reservation').click();\ncy.contains('+ Create New Reservation').click();",
+              "err": {},
+              "uuid": "1fb8be1d-bb15-4267-a1be-23f0e22ddf2c",
+              "parentUUID": "d97b5b5f-7787-494a-9f2b-4fa8b0e47786",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input New Reservation",
+              "fullTitle": "Addnewreservation Input New Reservation",
+              "timedOut": null,
+              "duration": 5187,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-select__slot > input').type('hradmin').should(\"have.value\", 'hradmin').get('.v-select-list > .v-list > [role=\"listitem\"] > .v-list__tile > .v-list__tile__content > .v-list__tile__title').click();\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(2) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.randomnumber(10).then(function (result) {\n  cy.get(':nth-child(3) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.dtmnow().then(function (result) {\n  cy.get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible').get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click();\n});\ncy.get(':nth-child(6) > .el-date-editor > .el-input__inner').click().get('.el-scrollbar__view > :nth-child(1)').click().and('visible');\ncy.get(':nth-child(7) > .el-date-editor > .el-input__inner').click().get('[style=\"width: 118.953px; position: absolute; top: 544px; left: 264px; z-index: 2003;\"] > .el-scrollbar > .el-picker-panel__content > .el-scrollbar__view > :nth-child(2)').click().and('visible');\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(8) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.get('.text-xs-center > .white--text > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: cy.click() failed because this element is detached from the DOM.\n\n<div class=\"v-list__tile__title\"></div>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.get()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying: cy.click() failed because this element is detached from the DOM.\n\n<div class=\"v-list__tile__title\"></div>\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > cy.get()\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at Object.retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at retryActionability (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85239:19)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Function.Promise.attempt.Promise.try (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:136682:29)\n    at tryFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96984:21)\n    at whenStable (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:97019:12)\n    at https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96569:16\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137524:18)\n    at Promise._fulfill (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137469:18)",
+                "diff": null
+              },
+              "uuid": "4517ddc2-16b9-4bc9-a452-c6934b152634",
+              "parentUUID": "d97b5b5f-7787-494a-9f2b-4fa8b0e47786",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select Room",
+              "fullTitle": "Addnewreservation Select Room",
+              "timedOut": null,
+              "duration": 4576,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-card > :nth-child(1) > .v-btn > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.v-card > :nth-child(1) > .v-btn > .v-btn__content', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.v-card > :nth-child(1) > .v-btn > .v-btn__content', but never found it.\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at onFailFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85591:16)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137520:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134132:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134142:10)\n    at Async.drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134016:14)",
+                "diff": null
+              },
+              "uuid": "d12cd3ad-6a11-4f95-8919-8de361c70180",
+              "parentUUID": "d97b5b5f-7787-494a-9f2b-4fa8b0e47786",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1fb8be1d-bb15-4267-a1be-23f0e22ddf2c"
+          ],
+          "failures": [
+            "4517ddc2-16b9-4bc9-a452-c6934b152634",
+            "d12cd3ad-6a11-4f95-8919-8de361c70180"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 19371,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

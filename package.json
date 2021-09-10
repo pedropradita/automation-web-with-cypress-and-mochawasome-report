@@ -1,0 +1,30 @@
+{
+  "name": "tenggo",
+  "version": "1.0.0",
+  "description": "Automation Project for Tenggo",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test": "npm start & cypress run",
+    "e2e": "cypress run",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record",
+    "cy:open": "cypress open",
+    "cleanup": "rm -fr cypress/reports/mochawesome/",
+    "merge_reports": "npx mochawesome-merge --reportDir cypress/reports/mochawesome/ > cypress/reports/mochawesome.json",
+    "generate_mochawesome_report": "npx mochawesome-report-generator --reportDir cypress/reports/ --cdn true --charts true cypress/reports/mochawesome.json",
+    "e2e_mochawesome": "npm run cleanup; cypress run; npm run merge_reports; npm run generate_mochawesome_report"
+  },
+  "author": "Lindvia",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.8.2",
+    "cypress-multi-reporters": "^1.2.3",
+    "cypress-xpath": "^1.4.0",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.1",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.1.0",
+    "xxxxx": "^1.0.3"
+  }
+}

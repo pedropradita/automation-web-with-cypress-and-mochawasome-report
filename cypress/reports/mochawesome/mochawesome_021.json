@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-12-23T03:24:27.624Z",
+    "end": "2019-12-23T03:24:38.381Z",
+    "duration": 10757,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f7cc461-5e2c-418b-ad86-7fd6c8c91b61",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+          "title": "Attendaces",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Attendaces Open Create New Reservation",
+              "timedOut": null,
+              "duration": 9868,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Attendances').click().get('.right > .v-btn__content').click();",
+              "err": {
+                "message": "CypressError: Timed out retrying: Expected to find element: '.right > .v-btn__content', but never found it.",
+                "estack": "CypressError: Timed out retrying: Expected to find element: '.right > .v-btn__content', but never found it.\n    at Object.cypressErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105262:11)\n    at Object.throwErr (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105217:18)\n    at Object.throwErrByPath (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:105249:17)\n    at retry (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:96526:16)\n    at onFailFn (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:85591:16)\n    at tryCatcher (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:139407:23)\n    at Promise._settlePromiseFromHandler (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137343:31)\n    at Promise._settlePromise (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137400:18)\n    at Promise._settlePromise0 (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137445:10)\n    at Promise._settlePromises (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:137520:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134132:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134142:10)\n    at Async.drainQueues (https://cms.tenggo.id/__cypress/runner/cypress_runner.js:134016:14)",
+                "diff": null
+              },
+              "uuid": "8ef98922-b9d1-48dc-b17e-cccbd5948ad2",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User select filter show list and choose Attedances Today or Total Attendances",
+              "fullTitle": "Attendaces User select filter show list and choose Attedances Today or Total Attendances",
+              "timedOut": null,
+              "duration": 502,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "c7aaf874-5e96-4238-a840-92f20e062b8d",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can search",
+              "fullTitle": "Attendaces User can search",
+              "timedOut": null,
+              "duration": 211,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a36ea946-c69e-4927-a894-4bc28d441c10",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can edit attendances data",
+              "fullTitle": "Attendaces User can edit attendances data",
+              "timedOut": null,
+              "duration": 30,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6f472eb8-e7c6-4415-9c4e-b867d25f1a09",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User can delete attendances data",
+              "fullTitle": "Attendaces User can delete attendances data",
+              "timedOut": null,
+              "duration": 48,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "2ab0dd23-6cd9-43ed-b2f6-e0fad02eab8e",
+              "parentUUID": "d2efdccf-a45a-4858-9acb-64fd137bb662",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7aaf874-5e96-4238-a840-92f20e062b8d",
+            "a36ea946-c69e-4927-a894-4bc28d441c10",
+            "6f472eb8-e7c6-4415-9c4e-b867d25f1a09",
+            "2ab0dd23-6cd9-43ed-b2f6-e0fad02eab8e"
+          ],
+          "failures": [
+            "8ef98922-b9d1-48dc-b17e-cccbd5948ad2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10659,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

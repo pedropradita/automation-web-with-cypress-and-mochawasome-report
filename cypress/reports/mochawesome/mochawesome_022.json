@@ -1,0 +1,181 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-01-21T03:04:06.773Z",
+    "end": "2020-01-21T03:04:13.997Z",
+    "duration": 7224,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5da67103-784b-4d75-8c67-b1b11b1381d9",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Can find and type in username",
+              "fullTitle": "Login Can find and type in username",
+              "timedOut": null,
+              "duration": 1960,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=\"login\"]').type(\"hradmin\").should(\"have.value\", \"hradmin\");",
+              "err": {},
+              "uuid": "de71541c-dae1-4253-9f1c-e82ba2d1b3ed",
+              "parentUUID": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Can find and type in password",
+              "fullTitle": "Login Can find and type in password",
+              "timedOut": null,
+              "duration": 1727,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://cms.tenggo.id\");\ncy.get('input[id=\"password\"]').type(\"betul\").should(\"have.value\", \"betul\");",
+              "err": {},
+              "uuid": "7b1be58e-d585-4b3f-9cd6-d4c697624db0",
+              "parentUUID": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will succeed when type valid user credentials",
+              "fullTitle": "Login Will succeed when type valid user credentials",
+              "timedOut": null,
+              "duration": 1393,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.server()\n//   .route({\n//   method: 'POST',\n//   url: '/api/v1/auth/login',\n//   response: '',\n//   status: 200\n// })\n// .as(\"login\")\n// cy.server()\n// cy.route({\n//   method: 'GET',\n//   url: '/api/v1/reservations/user/monthly?employee_id=3&page=1&query=0&year=&status=all',\n//   response: '',\n//   status: 200\n// })\ncy.get('input[name=\"login\"]').type('hradmin').should(\"have.value\", 'hradmin');\ncy.get('input[id=\"password\"]').type('betul').should(\"have.value\", 'betul');\ncy.contains('Login').click({\n  force: true\n});\ncy.get('img').and('visible'); // .wait('@login')",
+              "err": {},
+              "uuid": "5c80585b-4a43-434c-93fa-4775b939a605",
+              "parentUUID": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will failed when type invalid user credentials",
+              "fullTitle": "Login Will failed when type invalid user credentials",
+              "timedOut": null,
+              "duration": 1320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: '/api/v1/auth/login',\n  response: '',\n  status: 401\n});\ncy.random(10).then(function (result) {\n  cy.get('input[name=\"login\"]').type(result);\n});\ncy.random(10).then(function (result) {\n  cy.get('input[id=\"password\"]').type(result);\n});\ncy.contains('Login').click();\ncy.contains('Username or Password Incorrect.').should('be.visible');",
+              "err": {},
+              "uuid": "a43b6d63-63b1-49e2-9fa5-45f0c7295e09",
+              "parentUUID": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Will failed when not type user credentials",
+              "fullTitle": "Login Will failed when not type user credentials",
+              "timedOut": null,
+              "duration": 690,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.server();\ncy.route({\n  method: 'POST',\n  url: '/api/v1/auth/login',\n  response: '',\n  status: 401\n});\ncy.contains('Login').click();\ncy.contains('Username cannot be empty').should('be.visible');\ncy.contains('Password is required').should('be.visible');\ncy.contains('Username or Password Incorrect.').should('be.visible');",
+              "err": {},
+              "uuid": "8d244247-dbec-422d-8ac6-6c1288edd4fc",
+              "parentUUID": "43aa27f7-6416-4f78-b3e7-21a90ff314a7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "de71541c-dae1-4253-9f1c-e82ba2d1b3ed",
+            "7b1be58e-d585-4b3f-9cd6-d4c697624db0",
+            "5c80585b-4a43-434c-93fa-4775b939a605",
+            "a43b6d63-63b1-49e2-9fa5-45f0c7295e09",
+            "8d244247-dbec-422d-8ac6-6c1288edd4fc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7090,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}

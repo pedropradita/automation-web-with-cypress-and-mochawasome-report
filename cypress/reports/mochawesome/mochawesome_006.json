@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-12-23T03:22:33.290Z",
+    "end": "2019-12-23T03:22:45.911Z",
+    "duration": 12621,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "79eae7de-392b-4393-a0bd-609c2bb6456e",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+          "title": "Addnewreservation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open Create New Reservation",
+              "fullTitle": "Addnewreservation Open Create New Reservation",
+              "timedOut": null,
+              "duration": 8398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.contains('Meeting Room').click();\ncy.contains('Approval Reservation').click();\ncy.contains('+ Create New Reservation').click();",
+              "err": {},
+              "uuid": "788ba7e2-d2fc-4e19-99dc-7456884def8c",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input New Reservation",
+              "fullTitle": "Addnewreservation Input New Reservation",
+              "timedOut": null,
+              "duration": 3619,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-select__slot > input').type('hradmin').should(\"have.value\", 'hradmin').get('.v-select-list > .v-list > [role=\"listitem\"] > .v-list__tile > .v-list__tile__content > .v-list__tile__title').click();\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(2) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.randomnumber(10).then(function (result) {\n  cy.get(':nth-child(3) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.dtmnow().then(function (result) {\n  cy.get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible').get('.md12 > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').click();\n});\ncy.get(':nth-child(6) > .el-date-editor > .el-input__inner').click().get('.el-scrollbar__view > :nth-child(1)').click().and('visible');\ncy.get(':nth-child(7) > .el-date-editor > .el-input__inner').click().get('[style=\"width: 118.953px; position: absolute; top: 544px; left: 264px; z-index: 2003;\"] > .el-scrollbar > .el-picker-panel__content > .el-scrollbar__view > :nth-child(2)').click().and('visible');\ncy.random(10).then(function (result) {\n  cy.get(':nth-child(8) > .v-input > .v-input__control > .v-input__slot > .v-text-field__slot > input').type(result).and('visible');\n});\ncy.get('.text-xs-center > .white--text > .v-btn__content').click();",
+              "err": {},
+              "uuid": "89a26aed-ab46-4c43-9517-9686d2edf15c",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select Room",
+              "fullTitle": "Addnewreservation Select Room",
+              "timedOut": null,
+              "duration": 499,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.v-card > :nth-child(1) > .v-btn > .v-btn__content').click();",
+              "err": {},
+              "uuid": "8a1fcd6f-d7cc-473b-afbf-579dd9d4a1c2",
+              "parentUUID": "8e5dfe6d-5efc-4945-80f8-466c5502e97c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "788ba7e2-d2fc-4e19-99dc-7456884def8c",
+            "89a26aed-ab46-4c43-9517-9686d2edf15c",
+            "8a1fcd6f-d7cc-473b-afbf-579dd9d4a1c2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12516,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "6.2.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.0.1"
+    }
+  }
+}
