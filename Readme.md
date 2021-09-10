@@ -1,4 +1,6 @@
+Sample for automation web with cypress and mochawasome report
 
+*URL have been changed a little bit for data secure for my client
 
 ## Getting Started
 ```
