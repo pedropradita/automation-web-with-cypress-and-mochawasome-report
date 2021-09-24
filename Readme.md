@@ -1,27 +1,14 @@
-Sample for automation web with cypress and mochawasome report
+My Sample for automation web with cypress and mochawasome report
 
 *URL have been changed a little bit for data secure for my client
 
-## Getting Started
-```
-cd existing_folder
-git init
-git remote add origin  https://yourusername@git.gits.id/qa/tenggo.git
-git add .
-git commit -m "Initial commit"
-git push -u origin master
-```
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-### Cypress
+## Cypress
 ```
 https://docs.cypress.io/guides/getting-started/installing-cypress.html
 ```
 
-### Installing
+## Installing
 
 A step by step series of examples that tell you how to get a development env running
 
