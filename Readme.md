@@ -1,4 +1,4 @@
-# My Sample for automation web with cypress and mochawasome report
+# My sample code for automation web with cypress and mochawasome report
 
 *URL have been changed a little bit for data secure for my client
 
@@ -9,8 +9,6 @@ https://docs.cypress.io/guides/getting-started/installing-cypress.html
 ```
 
 ## Installing
-
-A step by step series of examples that tell you how to get a development env running
 
 ```
 install node and npm first
